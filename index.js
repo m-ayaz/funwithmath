@@ -92,7 +92,11 @@ function generateRandomSquare(){
     let nY=Math.floor(window.outerHeight/cellSize)+2;
     for(let i=0;i<nX;i++){
         for(let j=0;j<nY;j++){
-            context.fillStyle = Math.random()<0.5?"white":"#cccccc";
+            // console.log(255.0-Math.random()*10.0)
+            context.fillStyle = "rgb("+(255-Math.random()*100)+","+(255-Math.random()*100)+","+(255-Math.random()*100)+")";
+            // console.log(context.fillStyle)
+            // context.fillStyle = "rgb(200,255,255)";
+            // context.fillStyle = Math.random()<0.5?"white":"#cccccc";
             context.fillRect(i*cellSize,j*cellSize,cellSize,cellSize);
         }
     }
