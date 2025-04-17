@@ -1,5 +1,9 @@
-var xxx="hello everyone!"
-function aaaa(){
+// var xxx="hello everyone!"
+
+document.addEventListener("DOMContentLoaded",function eng() {
+    createQuestion("eng");
+});
+function createQuestion(lang){
     // console.log("saasas");
     let x=Math.floor(Math.random()*20-10);
     let y=Math.floor(Math.random()*20-10);
@@ -25,7 +29,7 @@ function aaaa(){
     let part22=stringifyMonomial(a22,"y");
     let middle1=a12>0 && a11!==0?"+":"";
     let middle2=a22>0 && a21!==0?"+":"";
-    let eq1Desc=part11+middle1+part12+"="+b1+" (asd;asld;sald;)";
+    let eq1Desc=part11+middle1+part12+"="+b1;
     let eq2Desc=part21+middle2+part22+"="+b2;
     // if(a11>0||a11<0){
     //     part1=a11+"x";
@@ -38,8 +42,14 @@ function aaaa(){
     //     part1="+"+a12+"y";
     //
     // }
-    document.getElementById("sle1").innerHTML="<div id=\"sle1\" style=\"font-size: 50pt;\">"+eq1Desc+"</div>";
-    document.getElementById("sle2").innerHTML="<div id=\"sle1\" style=\"font-size: 50pt;\">"+eq2Desc+"</div>";
+    if(lang==="eng"){
+        document.getElementById("sle1").innerHTML="<div id=\"sle1\" style=\"font-size: 50pt;\">"+eq1Desc+"</div>";
+        document.getElementById("sle2").innerHTML="<div id=\"sle1\" style=\"font-size: 50pt;\">"+eq2Desc+"</div>";
+    }else{
+        document.getElementById("sle1").innerHTML="<div id=\"sle1\" style=\"font-size: 50pt;font-family:  'B Nazanin',serif;\">"+eq1Desc+"</div>";
+        document.getElementById("sle2").innerHTML="<div id=\"sle1\" style=\"font-size: 50pt;font-family:  'B Nazanin',serif;\">"+eq2Desc+"</div>";
+    }
+
 }
 
 function stringifyMonomial(coeff,varStr) {
@@ -53,3 +63,4 @@ function stringifyMonomial(coeff,varStr) {
         return coeff + "" + varStr;
     }
 }
+
