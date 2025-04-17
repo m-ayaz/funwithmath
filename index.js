@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded",function eng() {
     createQuestion("eng");
+    generateRandomSquare();
 });
+
+window.addEventListener("resize",generateRandomSquare)
 function createQuestion(lang) {
     const MAX = 20;
     let x = Math.floor(Math.random() * 2 * MAX - MAX);
@@ -48,4 +51,47 @@ function stringifyMonomial(coeff,varStr) {
     } else {
         return coeff + "" + varStr;
     }
+}
+
+function generateRandomSquare(){
+    // console.log("aaaa");
+    let diffCanvas = document.getElementById("diffCanvas");
+    let context = diffCanvas.getContext("2d");
+    // context.beginPath();
+    // context.moveTo(0, 250);      // starting point at the top of the triangle
+    // for(let i=0;i<1000;i++){
+    //     context.lineTo(i/10, 250-(i/10)*(i/10)/100);     // line to right bottom corner
+    //     // context.lineTo(50, 100);      // line to left bottom corner
+    // }
+    // context.stroke();
+    //
+    // // context.closePath();
+    // context.beginPath();
+    // context.moveTo(100, 250);      // starting point at the top of the triangle
+    // for(let i=0;i<1000;i++){
+    //     context.lineTo(100-i/10, 250-(i/10)*(i/10)/100);     // line to right bottom corner
+    //     // context.lineTo(50, 100);      // line to left bottom corner
+    // }
+    // // context.closePath();
+    //
+    // context.stroke();            // draw the lines
+
+    context.clearRect(0,0,300,300);
+
+    // context.fillStyle = "green";
+// Add a rectangle at (10, 10) with size 100x100 pixels
+//     let diffCanvasWidth=window.innerWidth;
+//     let diffCanvasHeight=window.outerHeight;
+    let cellSize=20;
+    let nX=Math.floor(window.outerWidth/cellSize)+2;
+    let nY=Math.floor(window.outerHeight/cellSize)+2;
+    for(let i=0;i<nX;i++){
+        for(let j=0;j<nY;j++){
+            context.fillStyle = Math.random()<0.5?"white":"#cccccc";
+            context.fillRect(i*cellSize,j*cellSize,cellSize,cellSize);
+        }
+    }
+
+
+    // context.
 }

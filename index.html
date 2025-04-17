@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" onmousemove="generateRandomSquare()" id="aaaaaa">
 <head>
     <meta charset="UTF-8">
     <title>Set of Linear Equations</title>
-    <script src="les.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<div>
-    <button onclick="createQuestion('eng')" style="font-size: 30pt;">English Numerals</button>
-    <button onclick="createQuestion('per')" style="font-size: 30pt;font-family: 'B Nazanin',serif;">اعداد فارسی</button>
-</div>
-<div id="sle1"></div>
-<div id="sle2"></div>
+<canvas id="diffCanvas" width="3000" height="3000" ></canvas>
+<div id="foreElements">
+    <div>
+        <button onclick="createQuestion('eng')" style="font-size: 30pt;">English Numerals</button>
+        <button onclick="createQuestion('per')" style="font-size: 30pt;font-family: 'B Nazanin',serif;">اعداد فارسی</button>
+    </div>
+    <div id="sle1"></div>
+    <div id="sle2"></div>
+
 
 <!--<div>-->
 <!--    <label style="font-size: 50pt;">x = </label>-->
@@ -23,7 +27,7 @@
 <!--</div>-->
 <!--<input type="submit" style="font-size: 50pt">-->
 
-
+</div>
 
 </body>
 </html>
