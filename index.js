@@ -32,11 +32,11 @@ function createQuestion(lang) {
     let eq2Desc = part21 + middle2 + part22 + "=" + b2;
 
     if (lang === "eng") {
-        document.getElementById("sle1").innerHTML = "<div id=\"sle1\" style=\"font-size: 50pt;\">" + eq1Desc + "</div>";
-        document.getElementById("sle2").innerHTML = "<div id=\"sle1\" style=\"font-size: 50pt;\">" + eq2Desc + "</div>";
+        document.getElementById("sle1").innerHTML = "<div id=\"sle1\" style=\"font-size: 100pt;\">" + eq1Desc + "</div>";
+        document.getElementById("sle2").innerHTML = "<div id=\"sle1\" style=\"font-size: 100pt;\">" + eq2Desc + "</div>";
     } else {
-        document.getElementById("sle1").innerHTML = "<div id=\"sle1\" style=\"font-size: 50pt;font-family:  'B Nazanin',serif;\">" + eq1Desc + "</div>";
-        document.getElementById("sle2").innerHTML = "<div id=\"sle1\" style=\"font-size: 50pt;font-family:  'B Nazanin',serif;\">" + eq2Desc + "</div>";
+        document.getElementById("sle1").innerHTML = "<div id=\"sle1\" style=\"font-size: 100pt;font-family:  'B Nazanin',serif;\">" + eq1Desc + "</div>";
+        document.getElementById("sle2").innerHTML = "<div id=\"sle1\" style=\"font-size: 100pt;font-family:  'B Nazanin',serif;\">" + eq2Desc + "</div>";
     }
 
 }
