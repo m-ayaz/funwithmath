@@ -1,4 +1,4 @@
-
+var xxx="hello everyone!"
 function aaaa(){
     // console.log("saasas");
     let x=Math.floor(Math.random()*20-10);
