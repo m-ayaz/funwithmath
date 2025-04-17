@@ -25,7 +25,7 @@ function aaaa(){
     let part22=stringifyMonomial(a22,"y");
     let middle1=a12>0 && a11!==0?"+":"";
     let middle2=a22>0 && a21!==0?"+":"";
-    let eq1Desc=part11+middle1+part12+"="+b1;
+    let eq1Desc=part11+middle1+part12+"="+b1+" (asd;asld;sald;)";
     let eq2Desc=part21+middle2+part22+"="+b2;
     // if(a11>0||a11<0){
     //     part1=a11+"x";
