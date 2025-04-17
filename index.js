@@ -1,9 +1,14 @@
 document.addEventListener("DOMContentLoaded",function eng() {
     createQuestion("eng");
+    resizeCanvas();
     generateRandomSquare();
 });
 
-window.addEventListener("resize",generateRandomSquare)
+window.addEventListener("resize",()=> {
+    resizeCanvas();
+    generateRandomSquare();
+
+})
 function createQuestion(lang) {
     const MAX = 20;
     let x = Math.floor(Math.random() * 2 * MAX - MAX);
@@ -76,7 +81,7 @@ function generateRandomSquare(){
     //
     // context.stroke();            // draw the lines
 
-    context.clearRect(0,0,300,300);
+    context.clearRect(0,0,diffCanvas.width,diffCanvas.height);
 
     // context.fillStyle = "green";
 // Add a rectangle at (10, 10) with size 100x100 pixels
@@ -94,4 +99,10 @@ function generateRandomSquare(){
 
 
     // context.
+}
+
+
+function resizeCanvas(){
+    document.getElementById("diffCanvas").width=window.outerWidth;
+    document.getElementById("diffCanvas").height=window.outerHeight;
 }
